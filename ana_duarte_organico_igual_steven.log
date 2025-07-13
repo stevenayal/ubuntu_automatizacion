@@ -1,0 +1,233 @@
+Script started on 2025-07-12 21:22:07-03:00 [COMMAND="bash /tmp/sesion_50_comandos_ana_steven_format.sh" TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="103" LINES="16"]
+=== PRÁCTICA DE 50 COMANDOS ===
+Fecha: Sat Jul 12 21:22:07 -03 2025
+Usuario: ana_duarte
+Directorio: /mnt/z/ISO/ubuntu/challenges
+
+--- Comando 3: ls ---
+a1.txt	a2.txt	a3.txt	b1.txt	b2.txt	b3.txt	bunch_of_files	c1.txt	c2.txt	c3.txt
+
+--- Comando 4: mkdir foo ---
+
+--- Comando 5: mkdir -p foo/bar/1/2/3 ---
+
+--- Comando 6: rm -rf foo ---
+
+--- Comando 7: echo 'Hola mundo' ---
+Hola mundo
+
+--- Comando 8: echo 'Hola mundo' > hello.txt ---
+
+--- Comando 9: touch empty.txt ---
+
+--- Comando 10: rm empty.txt ---
+
+--- Comando 11: > empty1.txt ---
+
+--- Comando 12: : > empty2.txt ---
+
+--- Comando 13: cp hello.txt goodby.txt ---
+
+--- Comando 14: mv goodby.txt hello_copy.txt ---
+
+--- Comando 15: diff hello.txt hello_copy.txt ---
+
+--- Comando 16: cat hello.txt hello_copy.txt > 2_hellos.txt ---
+
+--- Comando 17: pwd ---
+/mnt/z/ISO/ubuntu/challenges
+
+--- Comando 18: ls -l ---
+total 0
+-rwxrwxrwx 1 root root   22 Jul 12  2025 2_hellos.txt
+-rwxrwxrwx 1 root root    0 Jul 12 21:15 a1.txt
+-rwxrwxrwx 1 root root    0 Jul 12 21:15 a2.txt
+-rwxrwxrwx 1 root root    0 Jul 12 21:15 a3.txt
+-rwxrwxrwx 1 root root    0 Jul 12 21:15 b1.txt
+-rwxrwxrwx 1 root root    0 Jul 12 21:15 b2.txt
+-rwxrwxrwx 1 root root    0 Jul 12 21:15 b3.txt
+drwxrwxrwx 1 root root 4096 Jul 12 21:15 bunch_of_files
+-rwxrwxrwx 1 root root    0 Jul 12 21:15 c1.txt
+-rwxrwxrwx 1 root root    0 Jul 12 21:15 c2.txt
+-rwxrwxrwx 1 root root    0 Jul 12 21:15 c3.txt
+-rwxrwxrwx 1 root root    0 Jul 12  2025 empty1.txt
+-rwxrwxrwx 1 root root    0 Jul 12  2025 empty2.txt
+-rwxrwxrwx 1 root root   11 Jul 12  2025 hello.txt
+-rwxrwxrwx 1 root root   11 Jul 12  2025 hello_copy.txt
+
+--- Comando 19: echo 'Texto agregado' >> restricted.txt ---
+
+--- Comando 20: ./hello_executable ---
+/tmp/sesion_50_comandos_ana_steven_format.sh: line 103: ./hello_executable: No such file or directory
+
+--- Comando 21: chmod +x challenge_20 && ./challenge_20 ---
+chmod: cannot access 'challenge_20': No such file or directory
+/tmp/sesion_50_comandos_ana_steven_format.sh: line 109: ./challenge_20: No such file or directory
+
+--- Comando 22: gcc compile_me.c -o compilado && ./compilado ---
+[01m[Kcc1:[m[K [01;31m[Kfatal error: [m[Kcompile_me.c: No such file or directory
+compilation terminated.
+/tmp/sesion_50_comandos_ana_steven_format.sh: line 115: ./compilado: No such file or directory
+
+--- Comando 23: ./redirect > output.txt ---
+/tmp/sesion_50_comandos_ana_steven_format.sh: line 120: ./redirect: No such file or directory
+
+--- Comando 24: date ---
+Sat Jul 12 21:22:07 -03 2025
+
+--- Comando 25: ps aux ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  22012 13452 ?        Ss   19:23   0:05 /usr/lib/systemd/systemd --system --
+root           2  0.0  0.0   2776  1928 ?        Sl   19:23   0:00 /init
+root           7  0.0  0.0   2792    68 ?        Sl   19:23   0:00 plan9 --control-socket 7 --log-level
+root         171  0.0  0.0   4236  2716 ?        Ss   19:23   0:00 /usr/sbin/cron -f -P
+message+     172  0.0  0.0   9904  5536 ?        Ss   19:23   0:01 @dbus-daemon --system --address=syst
+root         179  0.0  0.1  17976  8528 ?        Ss   19:23   0:00 /usr/lib/systemd/systemd-logind
+root         182  0.0  0.2 1756096 18192 ?       Ssl  19:23   0:01 /usr/libexec/wsl-pro-service -vv
+root         197  0.0  0.0   3160  1104 hvc0     Ss+  19:23   0:00 /sbin/agetty -o -p -- \u --noclear -
+root         207  0.0  0.0   3116  1104 tty1     Ss+  19:23   0:00 /sbin/agetty -o -p -- \u --noclear -
+root         213  0.0  0.2 107012 22344 ?        Ssl  19:23   0:00 /usr/bin/python3 /usr/share/unattend
+root         535  0.0  0.0   6820  4680 pts/1    Ss   19:27   0:00 /bin/login -f
+steven       623  0.0  0.1  20036 10860 ?        Ss   19:27   0:00 /usr/lib/systemd/systemd --user --de
+steven       624  0.0  0.0  21148  1728 ?        S    19:27   0:00 (sd-pam)
+steven       637  0.0  0.0   6056  4904 pts/1    S+   19:27   0:00 -bash
+polkitd     1242  0.0  0.0 308160  7892 ?        Ssl  19:35   0:00 /usr/lib/polkit-1/polkitd --no-debug
+root        1940  0.0  0.0   2784   212 ?        Ss   19:44   0:00 /init
+root        1941  0.0  0.0   2784   220 ?        S    19:44   0:00 /init
+steven      1945  0.0  0.0   3144  1232 pts/3    Ss+  19:44   0:00 script -a stevenayala.log
+steven      1946  0.0  0.0   6080  5212 pts/4    Ss+  19:44   0:00 bash -i
+root        5168  0.0  0.2  66812 19788 ?        S<s  20:51   0:00 /usr/lib/systemd/systemd-journald
+syslog      7751  0.0  0.0 222508  7100 ?        Ssl  20:51   0:00 /usr/sbin/rsyslogd -n -iNONE
+systemd+    8322  0.0  0.0  91020  6540 ?        Ssl  20:51   0:00 /usr/lib/systemd/systemd-timesyncd
+root        8372  0.0  0.0  23728  6020 ?        Ss   20:51   0:00 /usr/lib/systemd/systemd-udevd
+systemd+    8668  0.0  0.1  21452 12268 ?        Ss   20:51   0:00 /usr/lib/systemd/systemd-resolved
+root       16566  0.0  0.0   2784   212 ?        Ss   21:22   0:00 /init
+root       16567  0.0  0.0   2784   220 ?        S    21:22   0:00 /init
+root       16568  0.0  0.0  23732  3176 ?        S    21:22   0:00 (udev-worker)
+root       16569  0.0  0.0  23732  3228 ?        S    21:22   0:00 (udev-worker)
+root       16570  0.0  0.0  23732  3176 ?        S    21:22   0:00 (udev-worker)
+root       16571  0.7  0.0  14316  7048 pts/0    Ss+  21:22   0:00 sudo bash generar_logs_organicos_ana
+root       16572  0.0  0.0  23732  3072 ?        S    21:22   0:00 (udev-worker)
+root       16573  0.0  0.0  14316  1252 pts/2    Ss   21:22   0:00 sudo bash generar_logs_organicos_ana
+root       16574  0.0  0.0   4752  3340 pts/2    S+   21:22   0:00 bash generar_logs_organicos_ana_duar
+root       16578  0.0  0.0  14564  6904 pts/2    S+   21:22   0:00 sudo -u ana_duarte script -a ana_dua
+root       16579  0.0  0.0  14564  1244 pts/5    Ss   21:22   0:00 sudo -u ana_duarte script -a ana_dua
+ana_dua+   16580  0.0  0.0   3144  1184 pts/5    S+   21:22   0:00 script -a ana_duarte_organico_igual_
+ana_dua+   16581  5.0  0.0   4752  3412 pts/6    Ss+  21:22   0:00 bash /tmp/sesion_50_comandos_ana_ste
+ana_dua+   16604  0.0  0.0   8280  4260 pts/6    R+   21:22   0:00 ps aux
+
+--- Comando 26: nproc ---
+8
+
+--- Comando 27: uname -r ---
+5.15.167.4-microsoft-standard-WSL2
+
+--- Comando 28: grep -r 'You found the needle in the haystack!' bunch_of_files/ ---
+
+--- Comando 29: head -n 25 people.csv ---
+head: cannot open 'people.csv' for reading: No such file or directory
+
+--- Comando 30: tail -n 25 people.csv ---
+tail: cannot open 'people.csv' for reading: No such file or directory
+
+--- Comando 31: diff greeting1.txt greeting2.txt ---
+diff: greeting1.txt: No such file or directory
+diff: greeting2.txt: No such file or directory
+
+--- Comando 32: echo 'Hola' && echo '¡mundo!' ---
+Hola
+¡mundo!
+
+--- Comando 33: dd if=/dev/zero of=zero_1MB.bin bs=1M count=1 ---
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.0102638 s, 102 MB/s
+
+--- Comando 34: dd if=/dev/zero of=zero_2MB.bin bs=1M count=2 ---
+2+0 records in
+2+0 records out
+2097152 bytes (2.1 MB, 2.0 MiB) copied, 0.0171825 s, 122 MB/s
+
+--- Comando 35: wc -l README.txt ---
+wc: README.txt: No such file or directory
+
+--- Comando 36: tail -n 5 README.txt ---
+tail: cannot open 'README.txt' for reading: No such file or directory
+
+--- Comando 37: head -n 5 README.txt ---
+head: cannot open 'README.txt' for reading: No such file or directory
+
+--- Comando 38: cut -d',' -f2 people.csv ---
+cut: people.csv: No such file or directory
+
+--- Comando 39: wc -l people.csv ---
+wc: people.csv: No such file or directory
+
+--- Comando 40: wc -w people.csv ---
+wc: people.csv: No such file or directory
+
+--- Comando 41: wc -c people.csv ---
+wc: people.csv: No such file or directory
+
+--- Comando 42: time wc -l people.csv ---
+wc: people.csv: No such file or directory
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.000s
+
+--- Comando 43: time echo 'test' ---
+test
+
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s
+
+--- Comando 44: ls | wc -l ---
+19
+
+--- Comando 45: ls *.txt | wc -l ---
+16
+
+--- Comando 46: sed -i 's/Hello/Hola/g' greeting1.txt greeting2.txt ---
+sed: can't read greeting1.txt: No such file or directory
+sed: can't read greeting2.txt: No such file or directory
+
+--- Comando 47: rsync -av --progress bunch_of_files/ bunch_of_files_backup/ ---
+sending incremental file list
+created directory bunch_of_files_backup
+rsync: [generator] failed to set times on "/mnt/z/ISO/ubuntu/challenges/bunch_of_files_backup/.": Operation not permitted (1)
+./
+file001.rand
+             20 100%    0.00kB/s    0:00:00               20 100%    0.00kB/s    0:00:00 (xfr#1, to-chk=4/6)
+file001.rand.copy
+             18 100%   17.58kB/s    0:00:00               18 100%   17.58kB/s    0:00:00 (xfr#2, to-chk=3/6)
+file002.rand
+             20 100%    9.77kB/s    0:00:00               20 100%    9.77kB/s    0:00:00 (xfr#3, to-chk=2/6)
+needle.txt
+             25 100%    4.88kB/s    0:00:00               25 100%    4.88kB/s    0:00:00 (xfr#4, to-chk=1/6)
+otro.txt
+             15 100%    1.83kB/s    0:00:00               15 100%    1.83kB/s    0:00:00 (xfr#5, to-chk=0/6)
+rsync: [receiver] mkstemp "/mnt/z/ISO/ubuntu/challenges/bunch_of_files_backup/.file001.rand.rgf6D8" failed: Operation not permitted (1)
+rsync: [receiver] mkstemp "/mnt/z/ISO/ubuntu/challenges/bunch_of_files_backup/.file001.rand.copy.JdN6zZ" failed: Operation not permitted (1)
+rsync: [receiver] mkstemp "/mnt/z/ISO/ubuntu/challenges/bunch_of_files_backup/.file002.rand.Z2YbA7" failed: Operation not permitted (1)
+rsync: [receiver] mkstemp "/mnt/z/ISO/ubuntu/challenges/bunch_of_files_backup/.needle.txt.hZYzzm" failed: Operation not permitted (1)
+rsync: [receiver] mkstemp "/mnt/z/ISO/ubuntu/challenges/bunch_of_files_backup/.otro.txt.raNOdk" failed: Operation not permitted (1)
+
+sent 467 bytes  received 158 bytes  1,250.00 bytes/sec
+total size is 98  speedup is 0.16
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+
+--- Comando 48: rm -f *.bin ---
+
+--- Comando 49: rm -rf bunch_of_files_backup ---
+
+=== RESUMEN FINAL ===
+Comandos ejecutados: 50
+Archivos creados: 17
+Directorio actual: /mnt/z/ISO/ubuntu/challenges
+Usuario: ana_duarte
+Fecha: Sat Jul 12 21:22:08 -03 2025
+=== FIN DE LA PRÁCTICA ===
+
+Script done on 2025-07-12 21:22:08-03:00 [COMMAND_EXIT_CODE="0"]
