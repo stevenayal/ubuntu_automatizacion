@@ -1,7 +1,7 @@
 ﻿NOTAS DE AUTOMATIZACIÓN Y MONITOREO - USUARIO STEVEN
 ====================================================
 
-FECHA DE CREACIÓN: $(date)
+FECHA DE CREACIÓN: 28/07/2025
 USUARIO: steven
 SISTEMA: WSL Ubuntu
 VERSIÓN: 1.0
@@ -314,6 +314,8 @@ Los scripts han sido validados exitosamente con evidencia completa:
 - **Estadísticas**: 7 respaldos mantenidos, 18.2M total
 - **Estado**: EXITOSO
 
+
+
 #### Script de Alerta (alerta_sistema.sh)
 - **Archivo de evidencia**: `evidencia_ejecucion_alerta.log`
 - **CPU**: 25% (Normal)
@@ -321,6 +323,9 @@ Los scripts han sido validados exitosamente con evidencia completa:
 - **Disco**: 60% (Normal)
 - **Estado**: NORMAL, 0 alertas generadas
 - **Tiempo de ejecución**: 1 segundo
+
+
+
 
 ### Verificación de Funcionalidad
 ```bash
@@ -351,5 +356,9 @@ FECHA DE ÚLTIMA ACTUALIZACIÓN: $(date)
 AUTOR: Sistema de Automatización - Práctica 4 
 
 
+
+
+
+Steven Gracia - 6050061
 
 
