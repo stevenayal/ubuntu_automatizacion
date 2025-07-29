@@ -1,0 +1,15 @@
+Práctica 2 - Reporte Completo
+Fecha: Wed Jul 16 20:36:43 -03 2025
+Estudiante: [Tu Nombre]
+==========================================
+
+EJERCICIO 1
+============
+=== 1. Crear e ingresar al directorio ejercicio1 ===
+Comando: mkdir -p ejercicio1 && cd ejercicio1 && pwd
+Resultado:
+/mnt/z/Proyectos/ubuntu_automatizacion/ejercicio1
+
+=== 2. Crear archivo plaintext con ls -R / ===
+Comando: ls -R / > plaintext 2>/dev/null && ls -lh plaintext
+Resultado:

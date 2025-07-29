@@ -1,0 +1,27 @@
+TAREA DE AUTOMATIZACIÓN Y MONITOREO - USUARIO STEVEN
+
+DESCRIPCIÓN:
+Implementación de un sistema de respaldo automatizado para el usuario steven en entorno WSL.
+
+OBJETIVOS:
+- Crear respaldos automáticos de directorios críticos del usuario
+- Implementar sistema de logging para monitoreo de respaldos
+- Configurar permisos y estructura de directorios apropiada
+- Asegurar independencia y personalización del script
+
+DIRECTORIOS A RESPALDAR:
+- /home/steven/documentos
+- /home/steven/fotos
+
+DESTINO DE RESPALDOS:
+- /backup
+
+ARCHIVO DE LOG:
+- /var/log/respaldo.log
+
+SCRIPT PRINCIPAL:
+- respaldo_avanzado.sh (con permisos de ejecución)
+
+FECHA DE CREACIÓN: $(date)
+USUARIO: steven
+SISTEMA: WSL Ubuntu 

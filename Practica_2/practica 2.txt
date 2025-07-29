@@ -1,0 +1,37 @@
+Práctica 2
+Instrucciones:
+●	Realizar los ejercicios en una instalación de linux.
+●	Crear un documento de texto y anotar el comando ejecutado y el resultado de cada operación. Si ocurre un error describa el error. Responda en el mismo archivo de texto las preguntas planteadas.
+●	Entregar el documento de texto como respuesta a la actividad.
+Ejercicio 1
+1.	Crear e ingresar al directorio “ejercicio1”.
+2.	Crear un archivo plaintext utilizando el siguiente comando:
+$ls -R />plaintext
+3.	Encriptar el archivo “plaintext” utilizando AES, guardar el resultado en un archivo “cifrado”.
+ a)    openssl aes-128-cbc  -in plaintext -out cifrado
+Mostrar en pantalla el contenido del archivo “cifrado”
+4.	 Encriptar el archivo “plaintext” utilizando AES en modo ECB y nombrar el resultado “cifrado-ecb”.
+ a)    openssl aes-128-ecb -in plaintext -out cifrado-ecb
+ 5.    Mostrar en pantalla el contenido del archivo “cifrado-ecb”.
+Ejercicio 2
+ 1.    Crear e ingresar al directorio “ejercicio2”. Descargar el archivo usando el comando:
+wget http://212.183.159.230/200MB.zip
+ 2.    Encriptar el archivo “200MB.zip” utilizando AES, midiendo el tiempo que tarda en ejecutarse el comando y guardando el resultado en “misdatos.des”.
+ time openssl aes-128-cbc -in 200MB.zip -out 200MB.zip.des -k contraseña
+ 3.    Encriptar el archivo “200MB.zip” utilizando 3DES, AES-128-CBC, AES-192-CBC y AES-256-CBC. Medir el tiempo que tarda cada algoritmo y anotar en la siguiente tabla: 
+
+Algoritmo	Tiempo
+des3	 
+aes-128-cbc	 
+aes-192-cbc	 
+aes-256-cbc	 
+    
+4.Desencriptar el archivo “misdatos.des” midiendo el tiempo. ¿Hay alguna diferencia notable al comparar con el tiempo de encriptación? ¿Por qué?
+ Ejercicio 3
+ 1.    Crear e ingresar al directorio “ejercicio3”.
+ 2.    Generar el hash SHA1 de cinco textos diferentes. Ej: echo hola | sha1sum. ¿Por qué el resultado tiene siempre la misma cantidad de caracteres?
+ 3.   Descargar el instalador del TeamPasswordManager del sitio
+	https://teampasswordmanager.com/download/
+Verificar el md5 del instalador utilizando un comando como:
+ a)    md5sum -c instalador.iso.md5
+ 4.    Generar el hash sha256sum del archivo instalador y guardarlo en un archivo llamado “instalador.sha256” y verifique que funciona.

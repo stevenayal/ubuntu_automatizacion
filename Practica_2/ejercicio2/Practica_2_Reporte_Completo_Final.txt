@@ -1,0 +1,34 @@
+1. ARCHIVO DE PRUEBA CREADO
+✓ Archivo de prueba creado exitosamente
+Tamaño: 10M
+
+2. ARCHIVOS ENCRIPTADOS GENERADOS
+✓ 3DES: 11M
+✓ AES-128-CBC: 11M
+✓ AES-192-CBC: 11M
+✓ AES-256-CBC: 11M
+
+3. DESENCRIPTACIÓN
+✓ Archivo desencriptado creado exitosamente
+Tamaño: 10M
+
+4. TABLA DE TIEMPOS DE ENCRIPTACIÓN
+==========================================
+Algoritmo          | Tamaño del archivo
+==========================================
+3DES        | 11M
+AES-128-CBC        | 11M
+AES-192-CBC        | 11M
+AES-256-CBC        | 11M
+==========================================
+
+5. ANÁLISIS DE RESULTADOS
+¿Hay alguna diferencia notable entre los algoritmos?
+Respuesta: Todos los algoritmos generan archivos del mismo tamaño
+porque la encriptación mantiene la estructura de datos original.
+
+¿Por qué?
+Respuesta: Los algoritmos de encriptación simétrica como AES y 3DES
+mantienen el tamaño del archivo original, solo cambian el contenido
+para hacerlo ilegible sin la clave correcta.
+

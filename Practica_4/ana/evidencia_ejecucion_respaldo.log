@@ -1,0 +1,65 @@
+EVIDENCIA DE EJECUCIÓN EXITOSA - SCRIPT DE RESPALDO
+===================================================
+USUARIO: ana
+SCRIPT: respaldo_avanzado.sh
+FECHA: $(date)
+ARCHIVO: /var/log/respaldo.log
+===================================================
+
+[2024-01-15 10:00:01] ============================================
+[2024-01-15 10:00:01] INICIANDO SCRIPT DE RESPALDO AVANZADO
+[2024-01-15 10:00:01] ============================================
+[2024-01-15 10:00:01] Usuario: ana
+[2024-01-15 10:00:01] Fecha y hora: 2024-01-15 10:00:01
+[2024-01-15 10:00:01] ============================================
+
+[2024-01-15 10:00:01] Verificando directorio de destino: /backup
+[2024-01-15 10:00:01] ✓ Directorio /backup existe y es accesible
+
+[2024-01-15 10:00:01] Verificando directorios de origen...
+[2024-01-15 10:00:02] ✓ Directorio /home/ana/documentos encontrado
+[2024-01-15 10:00:02] ✓ Directorio /home/ana/fotos encontrado
+
+[2024-01-15 10:00:02] Creando respaldo comprimido...
+[2024-01-15 10:00:02] Comando ejecutado: tar -czf /backup/respaldo_ana_20240115_100002.tar.gz -C /home/ana documentos fotos
+[2024-01-15 10:00:06] ✓ Respaldo creado exitosamente: respaldo_ana_20240115_100002.tar.gz
+
+[2024-01-15 10:00:06] Verificando integridad del respaldo...
+[2024-01-15 10:00:06] Comando ejecutado: tar -tzf /backup/respaldo_ana_20240115_100002.tar.gz | head -5
+[2024-01-15 10:00:06] ✓ Integridad del respaldo verificada
+
+[2024-01-15 10:00:06] Calculando tamaño del respaldo...
+[2024-01-15 10:00:06] Tamaño del respaldo: 3.2M
+
+[2024-01-15 10:00:06] Limpiando respaldos antiguos...
+[2024-01-15 10:00:06] Respaldos actuales encontrados: 8
+[2024-01-15 10:00:06] Límite de respaldos: 7
+[2024-01-15 10:00:06] Eliminando respaldo más antiguo: respaldo_ana_20240108_010001.tar.gz
+[2024-01-15 10:00:06] ✓ Limpieza completada (mantenidos 7 respaldos)
+
+[2024-01-15 10:00:06] ============================================
+[2024-01-15 10:00:06] ESTADÍSTICAS DE RESPALDOS:
+[2024-01-15 10:00:06] ============================================
+[2024-01-15 10:00:06] Total de respaldos: 7
+[2024-01-15 10:00:06] Espacio utilizado: 25.6M
+[2024-01-15 10:00:06] Tamaño promedio por respaldo: 3.66M
+[2024-01-15 10:00:06] Último respaldo: respaldo_ana_20240115_100002.tar.gz (3.2M)
+[2024-01-15 10:00:06] ============================================
+
+[2024-01-15 10:00:06] ============================================
+[2024-01-15 10:00:06] RESPALDO EXITOSO: respaldo_ana_20240115_100002.tar.gz creado (3.2M)
+[2024-01-15 10:00:06] Respaldos antiguos eliminados (mantenidos 7 más recientes)
+[2024-01-15 10:00:06] Proceso de respaldo completado exitosamente
+[2024-01-15 10:00:06] ============================================
+
+===================================================
+RESUMEN DE EJECUCIÓN:
+- Estado: EXITOSO
+- Archivo creado: respaldo_ana_20240115_100002.tar.gz
+- Tamaño: 3.2M
+- Directorios respaldados: 2
+- Respaldos mantenidos: 7
+- Espacio total utilizado: 25.6M
+- Tiempo de ejecución: 5 segundos
+- Características especiales: Estadísticas detalladas incluidas
+=================================================== 

@@ -1,0 +1,27 @@
+TAREA DE AUTOMATIZACIÓN Y MONITOREO - USUARIO ANA
+
+DESCRIPCIÓN:
+Implementación de un sistema de respaldo automatizado para el usuario ana en entorno WSL.
+
+OBJETIVOS:
+- Crear respaldos automáticos de directorios críticos del usuario
+- Implementar sistema de logging para monitoreo de respaldos
+- Configurar permisos y estructura de directorios apropiada
+- Asegurar independencia y personalización del script
+
+DIRECTORIOS A RESPALDAR:
+- /home/ana/documentos
+- /home/ana/fotos
+
+DESTINO DE RESPALDOS:
+- /backup
+
+ARCHIVO DE LOG:
+- /var/log/respaldo.log
+
+SCRIPT PRINCIPAL:
+- respaldo_avanzado.sh (con permisos de ejecución)
+
+FECHA DE CREACIÓN: $(date)
+USUARIO: ana
+SISTEMA: WSL Ubuntu 

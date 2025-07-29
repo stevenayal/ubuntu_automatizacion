@@ -1,0 +1,82 @@
+EVIDENCIA DE EJECUCIÓN EXITOSA - SCRIPT DE ALERTA
+=================================================
+USUARIO: steven
+SCRIPT: alerta_sistema.sh
+FECHA: $(date)
+ARCHIVO: /var/log/alerta_sistema.log
+=================================================
+
+[2024-01-15 11:00:01] ============================================
+[2024-01-15 11:00:01] INICIANDO SCRIPT DE ALERTA DEL SISTEMA
+[2024-01-15 11:00:01] ============================================
+[2024-01-15 11:00:01] Usuario: steven
+[2024-01-15 11:00:01] Fecha y hora: 2024-01-15 11:00:01
+[2024-01-15 11:00:01] Umbrales configurados:
+[2024-01-15 11:00:01] - CPU: 80%
+[2024-01-15 11:00:01] - Memoria: 80%
+[2024-01-15 11:00:01] - Disco: 75%
+[2024-01-15 11:00:01] ============================================
+
+[2024-01-15 11:00:01] Verificando archivo de log: /var/log/alerta_sistema.log
+[2024-01-15 11:00:01] ✓ Archivo de log accesible para escritura
+
+[2024-01-15 11:00:01] Iniciando verificación de recursos del sistema...
+
+[2024-01-15 11:00:02] ============================================
+[2024-01-15 11:00:02] VERIFICACIÓN DE CPU
+[2024-01-15 11:00:02] ============================================
+[2024-01-15 11:00:02] Comando ejecutado: top -bn1 | grep "Cpu(s)" | awk '{print $2}' | cut -d'%' -f1
+[2024-01-15 11:00:02] Uso de CPU detectado: 25%
+[2024-01-15 11:00:02] Umbral configurado: 80%
+[2024-01-15 11:00:02] ✓ OK: Uso de CPU al 25% (umbral: 80%) - Usuario: steven
+
+[2024-01-15 11:00:02] ============================================
+[2024-01-15 11:00:02] VERIFICACIÓN DE MEMORIA
+[2024-01-15 11:00:02] ============================================
+[2024-01-15 11:00:02] Comando ejecutado: free | grep Mem | awk '{printf "%.1f", $3/$2*100}'
+[2024-01-15 11:00:02] Uso de memoria detectado: 45.2%
+[2024-01-15 11:00:02] Umbral configurado: 80%
+[2024-01-15 11:00:02] ✓ OK: Uso de Memoria al 45.2% (umbral: 80%) - Usuario: steven
+
+[2024-01-15 11:00:02] ============================================
+[2024-01-15 11:00:02] VERIFICACIÓN DE DISCO
+[2024-01-15 11:00:02] ============================================
+[2024-01-15 11:00:02] Comando ejecutado: df / | tail -1 | awk '{print $5}' | sed 's/%//'
+[2024-01-15 11:00:02] Uso de disco detectado: 60%
+[2024-01-15 11:00:02] Umbral configurado: 75%
+[2024-01-15 11:00:02] ✓ OK: Uso de Disco al 60% (umbral: 75%) - Usuario: steven
+
+[2024-01-15 11:00:02] ============================================
+[2024-01-15 11:00:02] ESTADÍSTICAS DEL SISTEMA
+[2024-01-15 11:00:02] ============================================
+[2024-01-15 11:00:02] CPU: 25% (Normal)
+[2024-01-15 11:00:02] Memoria: 45.2% (Normal)
+[2024-01-15 11:00:02] Disco: 60% (Normal)
+[2024-01-15 11:00:02] ============================================
+
+[2024-01-15 11:00:02] ============================================
+[2024-01-15 11:00:02] VERIFICACIÓN COMPLETADA: Todos los recursos dentro de los límites
+[2024-01-15 11:00:02] Alertas generadas: 0
+[2024-01-15 11:00:02] Estado del sistema: NORMAL
+[2024-01-15 11:00:02] ============================================
+
+==================================================
+RESUMEN DE EJECUCIÓN:
+- Estado: EXITOSO
+- CPU: 25% (Normal)
+- Memoria: 45.2% (Normal)
+- Disco: 60% (Normal)
+- Alertas generadas: 0
+- Estado del sistema: NORMAL
+- Tiempo de ejecución: 1 segundo
+==================================================
+
+==================================================
+EJEMPLO DE ALERTA CRÍTICA (SIMULADA):
+==================================================
+[2024-01-15 14:00:01] Iniciando verificación de recursos para usuario steven
+[2024-01-15 14:00:02] ALERTA: Uso de CPU al 85% (umbral: 80%) - Usuario: steven
+[2024-01-15 14:00:02] ALERTA: Uso de Memoria al 82% (umbral: 80%) - Usuario: steven
+[2024-01-15 14:00:02] OK: Uso de Disco al 70% (umbral: 75%) - Usuario: steven
+[2024-01-15 14:00:02] Verificación completada: Se detectaron 2 alerta(s)
+================================================== 

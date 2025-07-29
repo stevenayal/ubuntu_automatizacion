@@ -1,0 +1,19 @@
+1. ARCHIVO PLAINTEXT CREADO
+Comando: ls -R /home > plaintext
+✓ Archivo plaintext creado exitosamente
+Tamaño: 14K
+Primeras 5 líneas del contenido:
+...
+
+2. ENCRIPTACIÓN AES-128-CBC
+Comando: openssl aes-128-cbc -in plaintext -out cifrado -k [password]
+✓ Archivo cifrado creado exitosamente
+Tamaño: 14K
+Contenido (primeros bytes en hexadecimal):
+
+3. ENCRIPTACIÓN AES-128-ECB
+Comando: openssl aes-128-ecb -in plaintext -out cifrado-ecb -k [password]
+✓ Archivo cifrado-ecb creado exitosamente
+Tamaño: 14K
+Contenido (primeros bytes en hexadecimal):
+

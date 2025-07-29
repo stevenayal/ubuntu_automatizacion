@@ -1,0 +1,22 @@
+=== CAPTURA: ej1_mostrar_plaintext - 2025-07-16 21:49:53 ===
+
+/home:
+ana_duarte
+steven
+
+/home/ana_duarte:
+INFO_ANA_DUARTE.txt
+documents
+logs
+projects
+test_ana_duarte.sh
+workspace
+
+/home/ana_duarte/documents:
+
+/home/ana_duarte/logs:
+ana_duarte_50_comandos_20250712_210854.log
+ana_duarte_50_comandos_20250712_211156.log
+ana_duarte_50_comandos_20250712_211553.log
+ana_duarte_organico_20250712_210320.log
+ana_duarte_organico_completo_20250712_210729.log

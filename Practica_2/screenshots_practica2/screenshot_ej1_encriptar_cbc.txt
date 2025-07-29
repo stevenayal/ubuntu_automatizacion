@@ -1,0 +1,4 @@
+=== CAPTURA: ej1_encriptar_cbc - 2025-07-16 21:49:53 ===
+
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.

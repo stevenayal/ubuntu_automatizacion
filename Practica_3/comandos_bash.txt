@@ -1,0 +1,93 @@
+Especificaciones de los Scripts 
+
+Script 1 
+
+Nombre: generararchivo.sh
+
+Entrada/parametros:
+-	t Cantidad de usuarios total
+-	d Cantidad de usuarios con contraseña débil
+
+generararchivo.sh 5 3 
+t=5
+d=3
+
+generararchivo.sh 4 6
+Error, la cantidad de usuarios debe ser mayor
+
+
+Salida:
+
+archivo de texto con nombre pass.txt contiendo t lineas de las cuales 3 corresponden a contraseñas débiles (3 caracteres).
+
+$ cat pass.txt
+usuario1:$debil$
+usuario2:$debil$
+usuario3:$debil$
+usuario4:$normal$
+usuario5:$normal$
+
+ 
+Pseudocódigo
+
+archivo = “passwd.txt”
+
+si cantidad de parámetros < 2:
+	return “Debe especificar 2 parámetros”.
+si t<d:
+	return “La cantidad total de usuarios debe ser mayor a la cantidad de contraseñas débiles”
+si no existe “/usr/bin/htpasswd”:
+	return “htpasswd no está instalado”
+
+desde i = 1 hasta $t:
+	si $i <= $d:
+		$passwd = `head -c 500 /dev/urandom | tr -dc '0-9'|cut -c -3`
+	else:
+		$passwd = `head -c 500 /dev/urandom | tr -dc 'a-zA-Z0-9'|cut -c -10`
+	fin si
+
+	si $archivo no existe:
+		htpasswd -b -c $archivo “usuario+$i” $passwd
+	sino:
+		htpasswd -b $archivo “usuario+$i” $passwd
+
+fin desde
+ 
+Script 2
+
+Nombre: verificarpasswd.sh
+Entrada: 
+-	Nombre del archivo a verificar.
+
+$ verificarpasswd.sh passwd.txt
+
+Salida:
+-	Lista de nombres de usuario con “contraseña débil”
+
+$ verificarpasswd.sh passwd.txt
+usuario1
+usuario2
+usuario3
+
+Pseudocódigo:
+
+si cantidad_parametros == 0:
+	return “Debe especificar un nombre de archivo”
+
+si $archivo no existe:
+	return “Archivo no se encuentra”
+
+si /usr/bin/hashcat no existe:
+	return “Hashcat debe estar instalado”
+
+# verificar formato del archivo y extraer solo la columna del hash
+# cat $archivo | cut -d “:” -f 2 
+
+para cada línea de $archivo:
+	$usuario, $hash = separar $linea por “:”
+
+hashcat -m 1600 -a 3 $hash  #TODO: especificar que solo pruebe hasta 4 caracteres
+si ultimo comando fue exitoso:
+	echo “$usuario”
+fin si
+fin para

@@ -1,0 +1,121 @@
+PROGRAMACIÓN DE TAREAS - USUARIO STEVEN
+==========================================
+
+FECHA DE CONFIGURACIÓN: $(date)
+USUARIO: steven
+SISTEMA: WSL Ubuntu
+
+1. CONFIGURACIÓN CRONTAB (RESPALDO DIARIO)
+==========================================
+# Respaldos diarios a la 1:00 AM
+0 1 * * * /home/steven/practica4/respaldo_avanzado.sh
+
+# Comando para agregar al crontab:
+# crontab -e
+# Luego agregar la línea: 0 1 * * * /home/steven/practica4/respaldo_avanzado.sh
+
+2. CONFIGURACIÓN ANACRON (RESPALDO SEMANAL)
+===========================================
+# Configuración en /etc/anacrontab para respaldos semanales
+# Agregar la siguiente línea al archivo /etc/anacrontab:
+
+# Respaldos semanales (cada 7 días)
+7 5 respaldo_semanal_steven /home/steven/practica4/respaldo_avanzado.sh
+
+# Comando para editar anacrontab (requiere permisos de root):
+# sudo nano /etc/anacrontab
+
+# Estructura del archivo anacrontab:
+# PERIODO  RETRASO  IDENTIFICADOR  COMANDO
+# 7        5        respaldo_semanal_steven  /home/steven/practica4/respaldo_avanzado.sh
+
+3. VERIFICACIÓN DE PERMISOS
+===========================
+# Verificar permisos del script:
+# ls -la /home/steven/practica4/respaldo_avanzado.sh
+
+# Asignar permisos de ejecución si es necesario:
+# chmod +x /home/steven/practica4/respaldo_avanzado.sh
+
+4. VERIFICACIÓN DE RUTAS
+========================
+# Verificar que existan los directorios:
+# ls -la /home/steven/documentos
+# ls -la /home/steven/fotos
+# ls -la /backup
+# ls -la /var/log/respaldo.log
+
+5. COMANDOS DE VERIFICACIÓN
+===========================
+# Verificar crontab actual:
+# crontab -l
+
+# Verificar configuración de anacron:
+# cat /etc/anacrontab
+
+# Verificar servicios:
+# sudo systemctl status cron
+# sudo systemctl status anacron
+
+# Verificar logs de anacron:
+# tail -f /var/log/anacron.log
+
+6. LOGS Y MONITOREO
+===================
+# Verificar logs del sistema:
+# tail -f /var/log/syslog | grep CRON
+# tail -f /var/log/syslog | grep anacron
+# tail -f /var/log/respaldo.log
+
+# Verificar estado de los servicios:
+# sudo systemctl is-active cron
+# sudo systemctl is-active anacron
+
+7. CONFIGURACIÓN ADICIONAL DE ANACRON
+=====================================
+# Para configurar anacron correctamente, asegurarse de que esté instalado:
+# sudo apt update
+# sudo apt install anacron
+
+# Verificar que anacron esté habilitado:
+# sudo systemctl enable anacron
+# sudo systemctl start anacron
+
+# Configurar anacron para ejecutarse desde cron:
+# Agregar al crontab del sistema (/etc/crontab):
+# 25 6 * * * root test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+
+NOTAS IMPORTANTES:
+- Asegurarse de que el servicio cron esté activo: sudo systemctl enable cron
+- Asegurarse de que el servicio anacron esté activo: sudo systemctl enable anacron
+- Verificar que el directorio /backup tenga permisos de escritura
+- Verificar que /var/log tenga permisos de escritura para el archivo respaldo.log
+- Anacron es útil para sistemas que no están siempre encendidos
+- El respaldo semanal con anacron se ejecutará cuando el sistema esté activo después de 7 días
+
+CONFIGURACIÓN IDÉNTICA A ANA:
+- Ambos usuarios tienen respaldos diarios con crontab
+- Ambos usuarios tienen respaldos semanales con anacron
+- Ambos usuarios tienen estadísticas de respaldos
+- Ambos usuarios tienen retención de 7 respaldos
+
+8. CONFIGURACIÓN DE ALERTA DEL SISTEMA
+======================================
+# Alerta del sistema cada hora
+0 * * * * /home/steven/practica4/alerta_sistema.sh
+
+# Comando para agregar al crontab:
+# crontab -e
+# Luego agregar la línea: 0 * * * * /home/steven/practica4/alerta_sistema.sh
+
+# Verificar configuración:
+# crontab -l
+
+# Monitorear logs de alerta:
+# tail -f /var/log/alerta_sistema.log
+# grep "steven" /var/log/alerta_sistema.log
+
+# Umbrales configurados:
+# - CPU: 80%
+# - Memoria: 80%
+# - Disco: 75% 

@@ -1,0 +1,75 @@
+EJEMPLOS DE REGISTROS DE LOGS DE ALERTA DEL SISTEMA - USUARIO STEVEN
+====================================================================
+
+Archivo: /var/log/alerta_sistema.log
+Fecha de generación: $(date)
+
+EJEMPLO 1: TODOS LOS RECURSOS DENTRO DE LOS LÍMITES
+===================================================
+[2024-01-15 10:00:01] Iniciando verificación de recursos para usuario steven
+[2024-01-15 10:00:02] OK: Uso de CPU al 25% (umbral: 80%) - Usuario: steven
+[2024-01-15 10:00:02] OK: Uso de Memoria al 45% (umbral: 80%) - Usuario: steven
+[2024-01-15 10:00:02] OK: Uso de Disco al 60% (umbral: 75%) - Usuario: steven
+[2024-01-15 10:00:02] Verificación completada: Todos los recursos dentro de los límites
+
+EJEMPLO 2: ALERTA DE CPU ELEVADA
+================================
+[2024-01-15 11:00:01] Iniciando verificación de recursos para usuario steven
+[2024-01-15 11:00:02] ALERTA: Uso de CPU al 85% (umbral: 80%) - Usuario: steven
+[2024-01-15 11:00:02] OK: Uso de Memoria al 50% (umbral: 80%) - Usuario: steven
+[2024-01-15 11:00:02] OK: Uso de Disco al 62% (umbral: 75%) - Usuario: steven
+[2024-01-15 11:00:02] Verificación completada: Se detectaron 1 alerta(s)
+
+EJEMPLO 3: ALERTA DE MEMORIA ELEVADA
+====================================
+[2024-01-15 12:00:01] Iniciando verificación de recursos para usuario steven
+[2024-01-15 12:00:02] OK: Uso de CPU al 30% (umbral: 80%) - Usuario: steven
+[2024-01-15 12:00:02] ALERTA: Uso de Memoria al 82% (umbral: 80%) - Usuario: steven
+[2024-01-15 12:00:02] OK: Uso de Disco al 65% (umbral: 75%) - Usuario: steven
+[2024-01-15 12:00:02] Verificación completada: Se detectaron 1 alerta(s)
+
+EJEMPLO 4: ALERTA DE DISCO ELEVADO
+==================================
+[2024-01-15 13:00:01] Iniciando verificación de recursos para usuario steven
+[2024-01-15 13:00:02] OK: Uso de CPU al 35% (umbral: 80%) - Usuario: steven
+[2024-01-15 13:00:02] OK: Uso de Memoria al 55% (umbral: 80%) - Usuario: steven
+[2024-01-15 13:00:02] ALERTA: Uso de Disco al 78% (umbral: 75%) - Usuario: steven
+[2024-01-15 13:00:02] Verificación completada: Se detectaron 1 alerta(s)
+
+EJEMPLO 5: MÚLTIPLES ALERTAS SIMULTÁNEAS
+========================================
+[2024-01-15 14:00:01] Iniciando verificación de recursos para usuario steven
+[2024-01-15 14:00:02] ALERTA: Uso de CPU al 88% (umbral: 80%) - Usuario: steven
+[2024-01-15 14:00:02] ALERTA: Uso de Memoria al 85% (umbral: 80%) - Usuario: steven
+[2024-01-15 14:00:02] ALERTA: Uso de Disco al 80% (umbral: 75%) - Usuario: steven
+[2024-01-15 14:00:02] Verificación completada: Se detectaron 3 alerta(s)
+
+EJEMPLO 6: SITUACIÓN CRÍTICA
+============================
+[2024-01-15 15:00:01] Iniciando verificación de recursos para usuario steven
+[2024-01-15 15:00:02] ALERTA: Uso de CPU al 95% (umbral: 80%) - Usuario: steven
+[2024-01-15 15:00:02] ALERTA: Uso de Memoria al 92% (umbral: 80%) - Usuario: steven
+[2024-01-15 15:00:02] ALERTA: Uso de Disco al 89% (umbral: 75%) - Usuario: steven
+[2024-01-15 15:00:02] Verificación completada: Se detectaron 3 alerta(s)
+
+EJEMPLO 7: RECUPERACIÓN DEL SISTEMA
+===================================
+[2024-01-15 16:00:01] Iniciando verificación de recursos para usuario steven
+[2024-01-15 16:00:02] OK: Uso de CPU al 20% (umbral: 80%) - Usuario: steven
+[2024-01-15 16:00:02] OK: Uso de Memoria al 40% (umbral: 80%) - Usuario: steven
+[2024-01-15 16:00:02] OK: Uso de Disco al 70% (umbral: 75%) - Usuario: steven
+[2024-01-15 16:00:02] Verificación completada: Todos los recursos dentro de los límites
+
+NOTAS IMPORTANTES:
+- Los logs se generan cada hora automáticamente
+- Formato de timestamp: [YYYY-MM-DD HH:MM:SS]
+- Umbrales configurados: CPU 80%, Memoria 80%, Disco 75%
+- Se registran tanto las alertas como los estados normales
+- El script se ejecuta desde crontab cada hora en punto
+- Archivo de log compartido: /var/log/alerta_sistema.log
+
+COMANDOS ÚTILES PARA MONITOREO:
+- Ver logs en tiempo real: tail -f /var/log/alerta_sistema.log
+- Ver últimas 10 líneas: tail -10 /var/log/alerta_sistema.log
+- Buscar alertas específicas: grep "ALERTA" /var/log/alerta_sistema.log
+- Ver alertas de steven: grep "steven" /var/log/alerta_sistema.log 

@@ -1,0 +1,31 @@
+1. HASHES SHA1 DE TEXTOS DIFERENTES
+Texto: 'Hola mundo'
+
+Texto: 'Linux es genial'
+
+Texto: 'Seguridad informática'
+
+Texto: 'Criptografía práctica'
+
+Texto: 'OpenSSL es poderoso'
+
+¿Por qué el resultado tiene siempre la misma cantidad de caracteres?
+Respuesta: SHA1 siempre genera un hash de 160 bits (40 caracteres hexadecimales),
+independientemente del tamaño del texto de entrada. Esto es una propiedad
+fundamental de las funciones hash criptográficas.
+
+2. ARCHIVO TEAMPASSWORDMANAGER
+✓ Archivo de prueba creado exitosamente
+Tamaño: 76
+Contenido:
+
+3. VERIFICACIÓN MD5
+✓ Archivo MD5 creado:
+
+Verificación MD5:
+
+4. VERIFICACIÓN SHA256
+✓ Archivo SHA256 creado:
+
+Verificación SHA256:
+

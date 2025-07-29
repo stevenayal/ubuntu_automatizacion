@@ -1,0 +1,134 @@
+PRÁCTICA 2 - CRIPTOGRAFÍA Y HASHING
+Fecha: Wed Jul 16 22:03:38 -03 2025
+================================================
+
+EJERCICIO 1: ENCRIPTACIÓN AES
+==============================
+1. Directorio ejercicio1 creado
+2. Creando archivo plaintext con ls -R /home > plaintext
+3. Primeras 10 líneas del archivo plaintext:
+/home:
+ana_duarte
+steven
+
+/home/ana_duarte:
+INFO_ANA_DUARTE.txt
+documents
+logs
+projects
+test_ana_duarte.sh
+4. Encriptando con AES-128-CBC:
+5. Encriptando con AES-128-ECB:
+6. Contenido del archivo cifrado (hexdump):
+00000000  53 61 6c 74 65 64 5f 5f  47 8e 71 a8 a0 d5 e5 b6  |Salted__G.q.....|
+00000010  84 1e 3c 42 ca c1 d0 ae  39 f5 5a ab 8f af 0a f2  |..<B....9.Z.....|
+00000020  bc 65 92 8d 7a 77 29 03  60 be a4 08 ff 0b 79 85  |.e..zw).`.....y.|
+00000030  55 6e c3 39 4c b5 74 25  7b e3 95 82 5e d5 f2 47  |Un.9L.t%{...^..G|
+00000040  e3 45 d0 b9 3a 2b dc d4  94 61 57 5f 8c 7c 68 28  |.E..:+...aW_.|h(|
+7. Contenido del archivo cifrado-ecb (hexdump):
+00000000  53 61 6c 74 65 64 5f 5f  80 d5 2a ac e1 5f f6 b5  |Salted__..*.._..|
+00000010  2f 30 50 35 fe 07 af e2  eb 3b 98 63 07 0f 0b 9a  |/0P5.....;.c....|
+00000020  ab 0a 99 16 23 5e 5d e4  36 18 3e 0c f8 9a d7 22  |....#^].6.>...."|
+00000030  89 24 06 fe 17 a1 b9 7d  52 5a d2 60 84 f9 4e c2  |.$.....}RZ.`..N.|
+00000040  4a fa 63 6b 6a e7 dc 88  ab 7a 7d 20 1f 97 03 18  |J.ckj....z} ....|
+8. Comparación de tamaños:
+-rwxrwxrwx 1 steven steven 14224 Jul 16  2025 cifrado
+-rwxrwxrwx 1 steven steven 14224 Jul 16  2025 cifrado-ecb
+-rwxrwxrwx 1 steven steven 14200 Jul 16  2025 plaintext
+
+EJERCICIO 2: ENCRIPTACIÓN DE ARCHIVOS GRANDES
+==============================================
+1. Directorio ejercicio2 creado
+2. Creando archivo de prueba de 5MB (dd if=/dev/zero of=200MB.zip bs=1M count=5)
+3. Encriptando con AES-128-CBC y midiendo tiempo:
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.
+
+real	0m0.206s
+user	0m0.015s
+sys	0m0.000s
+4. Comparando tiempos de diferentes algoritmos:
+DES3:
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.
+
+real	0m0.395s
+user	0m0.157s
+sys	0m0.026s
+AES-128-CBC:
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.
+
+real	0m0.183s
+user	0m0.013s
+sys	0m0.000s
+AES-192-CBC:
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.
+
+real	0m0.167s
+user	0m0.000s
+sys	0m0.012s
+AES-256-CBC:
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.
+
+real	0m0.163s
+user	0m0.013s
+sys	0m0.000s
+5. Desencriptando archivo y midiendo tiempo:
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.
+
+real	0m0.249s
+user	0m0.014s
+sys	0m0.000s
+6. Verificando integridad (md5sum 200MB.zip 200MB_desencriptado.zip):
+5f363e0e58a95f06cbe9bbc662c5dfb6  200MB.zip
+5f363e0e58a95f06cbe9bbc662c5dfb6  200MB_desencriptado.zip
+
+EJERCICIO 3: HASHING Y VERIFICACIÓN
+===================================
+1. Directorio ejercicio3 creado
+2. Generando hashes SHA1 de cinco textos diferentes:
+459567d3bde4418b7fe302ff9809c4b0befaf7dd  -
+a2c1798845191ef204153592637667547d4968ae  -
+4084d7e2c0afcf393f8b22a436c706a5e619ad46  -
+0e1196e667b8e90ac251a6572cac43353261e2c9  -
+5b939092f19e19903b3bf10c66cfcdb116681266  -
+\nPREGUNTA: ¿Por qué el resultado tiene siempre la misma cantidad de caracteres?
+RESPUESTA: SHA1 siempre produce una salida de 160 bits (40 caracteres hexadecimales) sin importar el tamaño de la entrada.
+3. Creando archivo de prueba instalador.iso
+4. Generando y verificando MD5:
+instalador.iso: OK
+5. Generando y verificando SHA256:
+instalador.iso: OK
+\nMostrando hashes generados:
+MD5:
+110ce186f1da9249e2b60a2db2d14f55  instalador.iso
+SHA256:
+90c702d9a9b885e8815eb310badb89cbc0dd31e70c0a94e5642f111be0f9619c  instalador.iso
+
+ANÁLISIS Y RESPUESTAS
+=====================
+1. ¿Hay alguna diferencia notable al comparar el tiempo de encriptación vs desencriptación?
+RESPUESTA: Generalmente, la encriptación y desencriptación con algoritmos simétricos como AES tienen tiempos muy similares, ya que ambos procesos realizan operaciones matemáticas similares.
+
+2. ¿Por qué los hashes SHA1 siempre tienen la misma longitud?
+RESPUESTA: SHA1 siempre produce una salida de 160 bits (40 caracteres hexadecimales) debido a su diseño matemático.
+
+3. ¿Cuál es la diferencia entre MD5 y SHA256?
+RESPUESTA: MD5 produce un hash de 128 bits (32 caracteres hex), mientras que SHA256 produce 256 bits (64 caracteres hex). SHA256 es más seguro y resistente a colisiones que MD5.
+
+4. ¿Cuál es la diferencia entre CBC y ECB en AES?
+RESPUESTA: CBC (Cipher Block Chaining) usa un vector de inicialización y encadena bloques, mientras que ECB (Electronic Codebook) encripta cada bloque independientemente. CBC es más seguro porque patrones idénticos en el texto plano no producen patrones idénticos en el texto cifrado.
+
+INFORMACIÓN DEL SISTEMA
+=======================
+OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)
+Linux stev 5.15.167.4-microsoft-standard-WSL2 #1 SMP Tue Nov 5 00:21:55 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+
+PRÁCTICA 2 COMPLETADA
+Archivo de resultados: practica2_resultados.txt
+Fecha de finalización: Wed Jul 16 22:03:39 -03 2025
+================================================

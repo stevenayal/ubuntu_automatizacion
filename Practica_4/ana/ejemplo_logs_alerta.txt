@@ -1,0 +1,101 @@
+EJEMPLOS DE REGISTROS DE LOGS DE ALERTA DEL SISTEMA - USUARIO ANA
+==================================================================
+
+Archivo: /var/log/alerta_sistema.log
+Fecha de generación: $(date)
+
+EJEMPLO 1: TODOS LOS RECURSOS DENTRO DE LOS LÍMITES
+===================================================
+[2024-01-15 10:00:01] Iniciando verificación de recursos para usuario ana
+[2024-01-15 10:00:02] OK: Uso de CPU al 22% (umbral: 80%) - Usuario: ana
+[2024-01-15 10:00:02] OK: Uso de Memoria al 42% (umbral: 80%) - Usuario: ana
+[2024-01-15 10:00:02] OK: Uso de Disco al 58% (umbral: 75%) - Usuario: ana
+[2024-01-15 10:00:02] Verificación completada: Todos los recursos dentro de los límites
+
+EJEMPLO 2: ALERTA DE CPU ELEVADA
+================================
+[2024-01-15 11:00:01] Iniciando verificación de recursos para usuario ana
+[2024-01-15 11:00:02] ALERTA: Uso de CPU al 83% (umbral: 80%) - Usuario: ana
+[2024-01-15 11:00:02] OK: Uso de Memoria al 48% (umbral: 80%) - Usuario: ana
+[2024-01-15 11:00:02] OK: Uso de Disco al 61% (umbral: 75%) - Usuario: ana
+[2024-01-15 11:00:02] Verificación completada: Se detectaron 1 alerta(s)
+
+EJEMPLO 3: ALERTA DE MEMORIA ELEVADA
+====================================
+[2024-01-15 12:00:01] Iniciando verificación de recursos para usuario ana
+[2024-01-15 12:00:02] OK: Uso de CPU al 28% (umbral: 80%) - Usuario: ana
+[2024-01-15 12:00:02] ALERTA: Uso de Memoria al 84% (umbral: 80%) - Usuario: ana
+[2024-01-15 12:00:02] OK: Uso de Disco al 64% (umbral: 75%) - Usuario: ana
+[2024-01-15 12:00:02] Verificación completada: Se detectaron 1 alerta(s)
+
+EJEMPLO 4: ALERTA DE DISCO ELEVADO
+==================================
+[2024-01-15 13:00:01] Iniciando verificación de recursos para usuario ana
+[2024-01-15 13:00:02] OK: Uso de CPU al 32% (umbral: 80%) - Usuario: ana
+[2024-01-15 13:00:02] OK: Uso de Memoria al 52% (umbral: 80%) - Usuario: ana
+[2024-01-15 13:00:02] ALERTA: Uso de Disco al 77% (umbral: 75%) - Usuario: ana
+[2024-01-15 13:00:02] Verificación completada: Se detectaron 1 alerta(s)
+
+EJEMPLO 5: MÚLTIPLES ALERTAS SIMULTÁNEAS
+========================================
+[2024-01-15 14:00:01] Iniciando verificación de recursos para usuario ana
+[2024-01-15 14:00:02] ALERTA: Uso de CPU al 86% (umbral: 80%) - Usuario: ana
+[2024-01-15 14:00:02] ALERTA: Uso de Memoria al 87% (umbral: 80%) - Usuario: ana
+[2024-01-15 14:00:02] ALERTA: Uso de Disco al 79% (umbral: 75%) - Usuario: ana
+[2024-01-15 14:00:02] Verificación completada: Se detectaron 3 alerta(s)
+
+EJEMPLO 6: SITUACIÓN CRÍTICA
+============================
+[2024-01-15 15:00:01] Iniciando verificación de recursos para usuario ana
+[2024-01-15 15:00:02] ALERTA: Uso de CPU al 93% (umbral: 80%) - Usuario: ana
+[2024-01-15 15:00:02] ALERTA: Uso de Memoria al 94% (umbral: 80%) - Usuario: ana
+[2024-01-15 15:00:02] ALERTA: Uso de Disco al 87% (umbral: 75%) - Usuario: ana
+[2024-01-15 15:00:02] Verificación completada: Se detectaron 3 alerta(s)
+
+EJEMPLO 7: RECUPERACIÓN DEL SISTEMA
+===================================
+[2024-01-15 16:00:01] Iniciando verificación de recursos para usuario ana
+[2024-01-15 16:00:02] OK: Uso de CPU al 18% (umbral: 80%) - Usuario: ana
+[2024-01-15 16:00:02] OK: Uso de Memoria al 38% (umbral: 80%) - Usuario: ana
+[2024-01-15 16:00:02] OK: Uso de Disco al 68% (umbral: 75%) - Usuario: ana
+[2024-01-15 16:00:02] Verificación completada: Todos los recursos dentro de los límites
+
+EJEMPLO 8: PATRÓN DE USO NORMAL
+================================
+[2024-01-15 17:00:01] Iniciando verificación de recursos para usuario ana
+[2024-01-15 17:00:02] OK: Uso de CPU al 35% (umbral: 80%) - Usuario: ana
+[2024-01-15 17:00:02] OK: Uso de Memoria al 55% (umbral: 80%) - Usuario: ana
+[2024-01-15 17:00:02] OK: Uso de Disco al 72% (umbral: 75%) - Usuario: ana
+[2024-01-15 17:00:02] Verificación completada: Todos los recursos dentro de los límites
+
+EJEMPLO 9: ALERTA PUNTUAL DE CPU
+================================
+[2024-01-15 18:00:01] Iniciando verificación de recursos para usuario ana
+[2024-01-15 18:00:02] ALERTA: Uso de CPU al 81% (umbral: 80%) - Usuario: ana
+[2024-01-15 18:00:02] OK: Uso de Memoria al 60% (umbral: 80%) - Usuario: ana
+[2024-01-15 18:00:02] OK: Uso de Disco al 73% (umbral: 75%) - Usuario: ana
+[2024-01-15 18:00:02] Verificación completada: Se detectaron 1 alerta(s)
+
+EJEMPLO 10: ALERTA CRÍTICA DE DISCO
+===================================
+[2024-01-15 19:00:01] Iniciando verificación de recursos para usuario ana
+[2024-01-15 19:00:02] OK: Uso de CPU al 25% (umbral: 80%) - Usuario: ana
+[2024-01-15 19:00:02] OK: Uso de Memoria al 45% (umbral: 80%) - Usuario: ana
+[2024-01-15 19:00:02] ALERTA: Uso de Disco al 92% (umbral: 75%) - Usuario: ana
+[2024-01-15 19:00:02] Verificación completada: Se detectaron 1 alerta(s)
+
+NOTAS IMPORTANTES:
+- Los logs se generan cada hora automáticamente
+- Formato de timestamp: [YYYY-MM-DD HH:MM:SS]
+- Umbrales configurados: CPU 80%, Memoria 80%, Disco 75%
+- Se registran tanto las alertas como los estados normales
+- El script se ejecuta desde crontab cada hora en punto
+- Archivo de log compartido: /var/log/alerta_sistema.log
+
+COMANDOS ÚTILES PARA MONITOREO:
+- Ver logs en tiempo real: tail -f /var/log/alerta_sistema.log
+- Ver últimas 10 líneas: tail -10 /var/log/alerta_sistema.log
+- Buscar alertas específicas: grep "ALERTA" /var/log/alerta_sistema.log
+- Ver alertas de ana: grep "ana" /var/log/alerta_sistema.log
+- Ver todas las alertas de hoy: grep "$(date +%Y-%m-%d)" /var/log/alerta_sistema.log | grep "ALERTA"
+- Contar alertas por usuario: grep "ALERTA" /var/log/alerta_sistema.log | awk '{print $NF}' | sort | uniq -c 

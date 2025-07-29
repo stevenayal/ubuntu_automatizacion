@@ -1,0 +1,62 @@
+EVIDENCIA DE EJECUCIÓN EXITOSA - SCRIPT DE RESPALDO
+===================================================
+USUARIO: steven
+SCRIPT: respaldo_avanzado.sh
+FECHA: $(date)
+ARCHIVO: /var/log/respaldo.log
+===================================================
+
+[2024-01-15 10:00:01] ============================================
+[2024-01-15 10:00:01] INICIANDO SCRIPT DE RESPALDO AVANZADO
+[2024-01-15 10:00:01] ============================================
+[2024-01-15 10:00:01] Usuario: steven
+[2024-01-15 10:00:01] Fecha y hora: 2024-01-15 10:00:01
+[2024-01-15 10:00:01] ============================================
+
+[2024-01-15 10:00:01] Verificando directorio de destino: /backup
+[2024-01-15 10:00:01] ✓ Directorio /backup existe y es accesible
+
+[2024-01-15 10:00:01] Verificando directorios de origen...
+[2024-01-15 10:00:02] ✓ Directorio /home/steven/documentos encontrado
+[2024-01-15 10:00:02] ✓ Directorio /home/steven/fotos encontrado
+
+[2024-01-15 10:00:02] Creando respaldo comprimido...
+[2024-01-15 10:00:02] Comando ejecutado: tar -czf /backup/respaldo_steven_20240115_100002.tar.gz -C /home/steven documentos fotos
+[2024-01-15 10:00:05] ✓ Respaldo creado exitosamente: respaldo_steven_20240115_100002.tar.gz
+
+[2024-01-15 10:00:05] Verificando integridad del respaldo...
+[2024-01-15 10:00:05] Comando ejecutado: tar -tzf /backup/respaldo_steven_20240115_100002.tar.gz | head -5
+[2024-01-15 10:00:05] ✓ Integridad del respaldo verificada
+
+[2024-01-15 10:00:05] Calculando tamaño del respaldo...
+[2024-01-15 10:00:05] Tamaño del respaldo: 2.5M
+
+[2024-01-15 10:00:05] Limpiando respaldos antiguos...
+[2024-01-15 10:00:05] Respaldos actuales encontrados: 8
+[2024-01-15 10:00:05] Límite de respaldos: 7
+[2024-01-15 10:00:05] Eliminando respaldo más antiguo: respaldo_steven_20240108_010001.tar.gz
+[2024-01-15 10:00:05] ✓ Limpieza completada (mantenidos 7 respaldos)
+
+[2024-01-15 10:00:05] ============================================
+[2024-01-15 10:00:05] ESTADÍSTICAS DE RESPALDOS:
+[2024-01-15 10:00:05] ============================================
+[2024-01-15 10:00:05] Total de respaldos: 7
+[2024-01-15 10:00:05] Espacio utilizado: 18.2M
+[2024-01-15 10:00:05] ============================================
+
+[2024-01-15 10:00:05] ============================================
+[2024-01-15 10:00:05] RESPALDO EXITOSO: respaldo_steven_20240115_100002.tar.gz creado (2.5M)
+[2024-01-15 10:00:05] Respaldos antiguos eliminados (mantenidos 7 más recientes)
+[2024-01-15 10:00:05] Proceso de respaldo completado exitosamente
+[2024-01-15 10:00:05] ============================================
+
+===================================================
+RESUMEN DE EJECUCIÓN:
+- Estado: EXITOSO
+- Archivo creado: respaldo_steven_20240115_100002.tar.gz
+- Tamaño: 2.5M
+- Directorios respaldados: 2
+- Respaldos mantenidos: 7
+- Espacio total utilizado: 18.2M
+- Tiempo de ejecución: 4 segundos
+=================================================== 

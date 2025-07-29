@@ -1,0 +1,62 @@
+Práctica 2 - Reporte Completo Final
+Fecha: Wed Jul 16 21:00:55 -03 2025
+Estudiante: [Tu Nombre]
+==========================================
+
+EJERCICIO 1: ENCRIPTACIÓN AES
+==============================
+
+/home:
+ana_duarte
+steven
+
+/home/ana_duarte:
+00000000: 5361 6c74 6564 5f5f c2f2 cf31 b202 dc3f  Salted__...1...?
+00000010: ec04 6ef8 589c 4a0c 3bed c714 2c86 450d  ..n.X.J.;...,.E.
+00000000: 5361 6c74 6564 5f5f 4be0 e6cc 27bf 5a9b  Salted__K...'.Z.
+00000010: 4752 986f d2ca 2c23 7507 630d 7ba1 18c6  GR.o..,#u.c.{...
+EJERCICIO 2: COMPARACIÓN DE ALGORITMOS
+=====================================
+
+EJERCICIO 3: GENERACIÓN DE HASHES
+=================================
+
+c083106c930790151165b95bd11860724e3836cb  -
+f91b3dd95374e53b044dbfde4d61f302e3b22107  -
+fd9de6bd5a4c0ed5b3ec211fa0063b41095b6cc6  -
+37edd0cf58666c73507b7d3ca2038e90ac74a479  -
+654086072c5437951fab20bccfaf74afd2af4819  -
+Contenido de prueba para TeamPasswordManager - Wed Jul 16 20:46:35 -03 2025
+be6f04b19c0268e7796fa8ac9d6c8647  teampasswordmanager.iso
+teampasswordmanager.iso: OK
+1dee93477a4a2ed752cffbd4e1d4989bb9dcaf59c1d4fed8f0a3b9b23246ea56  teampasswordmanager.iso
+teampasswordmanager.iso: OK
+==========================================
+RESUMEN FINAL
+==========================================
+Todos los ejercicios han sido completados exitosamente:
+
+✓ EJERCICIO 1: Encriptación AES CBC y ECB
+  - Archivo plaintext creado
+  - Encriptación AES-128-CBC exitosa
+  - Encriptación AES-128-ECB exitosa
+
+✓ EJERCICIO 2: Comparación de algoritmos de encriptación
+  - Archivo de prueba de 10MB creado
+  - Encriptación con 3DES, AES-128, AES-192, AES-256
+  - Desencriptación exitosa
+  - Análisis de resultados incluido
+
+✓ EJERCICIO 3: Generación y verificación de hashes
+  - Hashes SHA1 de 5 textos diferentes
+  - Archivo de prueba para TeamPasswordManager
+  - Verificación MD5 exitosa
+  - Verificación SHA256 exitosa
+
+Archivos generados:
+- ejercicio1/plaintext, cifrado, cifrado-ecb
+- ejercicio2/archivos encriptados y desencriptados
+- ejercicio3/archivos de hash y verificación
+
+Fecha de finalización: Wed Jul 16 21:00:55 -03 2025
+==========================================
