@@ -1,4 +1,4 @@
-NOTAS DE AUTOMATIZACIÓN Y MONITOREO - USUARIO STEVEN
+﻿NOTAS DE AUTOMATIZACIÓN Y MONITOREO - USUARIO STEVEN
 ====================================================
 
 FECHA DE CREACIÓN: $(date)
@@ -349,3 +349,7 @@ La automatización reduce significativamente la intervención manual y proporcio
 
 FECHA DE ÚLTIMA ACTUALIZACIÓN: $(date)
 AUTOR: Sistema de Automatización - Práctica 4 
+
+
+
+
