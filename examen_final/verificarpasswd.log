@@ -1,0 +1,89 @@
+[2024-12-15 14:30:15] Iniciando ejecución del script verificarpasswd.sh
+[2024-12-15 14:30:15] Archivo de entrada especificado: passwd.txt
+[2024-12-15 14:30:15] Verificando existencia del archivo de entrada
+[2024-12-15 14:30:15] Archivo 'passwd.txt' encontrado y accesible
+[2024-12-15 14:30:15] Verificando dependencias del sistema
+[2024-12-15 14:30:15] Hashcat encontrado en /usr/bin/hashcat
+[2024-12-15 14:30:15] Iniciando verificación de contraseñas débiles
+[2024-12-15 14:30:15] Procesando usuario: admin
+[2024-12-15 14:30:16] Ejecutando hashcat para usuario admin
+[2024-12-15 14:30:16] CONTRASEÑA DÉBIL DETECTADA para usuario: admin
+[2024-12-15 14:30:16] Archivo temporal eliminado para usuario admin
+[2024-12-15 14:30:16] Procesando usuario: usuario1
+[2024-12-15 14:30:16] Ejecutando hashcat para usuario usuario1
+[2024-12-15 14:30:17] CONTRASEÑA DÉBIL DETECTADA para usuario: usuario1
+[2024-12-15 14:30:17] Archivo temporal eliminado para usuario usuario1
+[2024-12-15 14:30:17] Procesando usuario: usuario2
+[2024-12-15 14:30:17] Ejecutando hashcat para usuario usuario2
+[2024-12-15 14:30:18] CONTRASEÑA DÉBIL DETECTADA para usuario: usuario2
+[2024-12-15 14:30:18] Archivo temporal eliminado para usuario usuario2
+[2024-12-15 14:30:18] Procesando usuario: testuser
+[2024-12-15 14:30:18] Ejecutando hashcat para usuario testuser
+[2024-12-15 14:30:19] Contraseña segura para usuario: testuser
+[2024-12-15 14:30:19] Archivo temporal eliminado para usuario testuser
+[2024-12-15 14:30:19] Procesando usuario: secureuser
+[2024-12-15 14:30:19] Ejecutando hashcat para usuario secureuser
+[2024-12-15 14:30:20] Contraseña segura para usuario: secureuser
+[2024-12-15 14:30:20] Archivo temporal eliminado para usuario secureuser
+[2024-12-15 14:30:20] Resumen final - Total usuarios: 5, Débiles: 3
+[2024-12-15 14:30:20] Verificación completada exitosamente
+
+[2024-12-16 02:00:01] Iniciando ejecución del script verificarpasswd.sh
+[2024-12-16 02:00:01] Archivo de entrada especificado: passwd.txt
+[2024-12-16 02:00:01] Verificando existencia del archivo de entrada
+[2024-12-16 02:00:01] Archivo 'passwd.txt' encontrado y accesible
+[2024-12-16 02:00:01] Verificando dependencias del sistema
+[2024-12-16 02:00:01] Hashcat encontrado en /usr/bin/hashcat
+[2024-12-16 02:00:01] Iniciando verificación de contraseñas débiles
+[2024-12-16 02:00:01] Procesando usuario: admin
+[2024-12-16 02:00:02] Ejecutando hashcat para usuario admin
+[2024-12-16 02:00:02] CONTRASEÑA DÉBIL DETECTADA para usuario: admin
+[2024-12-16 02:00:02] Archivo temporal eliminado para usuario admin
+[2024-12-16 02:00:02] Procesando usuario: usuario1
+[2024-12-16 02:00:02] Ejecutando hashcat para usuario usuario1
+[2024-12-16 02:00:03] CONTRASEÑA DÉBIL DETECTADA para usuario: usuario1
+[2024-12-16 02:00:03] Archivo temporal eliminado para usuario usuario1
+[2024-12-16 02:00:03] Procesando usuario: usuario2
+[2024-12-16 02:00:03] Ejecutando hashcat para usuario usuario2
+[2024-12-16 02:00:04] CONTRASEÑA DÉBIL DETECTADA para usuario: usuario2
+[2024-12-16 02:00:04] Archivo temporal eliminado para usuario usuario2
+[2024-12-16 02:00:04] Procesando usuario: testuser
+[2024-12-16 02:00:04] Ejecutando hashcat para usuario testuser
+[2024-12-16 02:00:05] Contraseña segura para usuario: testuser
+[2024-12-16 02:00:05] Archivo temporal eliminado para usuario testuser
+[2024-12-16 02:00:05] Procesando usuario: secureuser
+[2024-12-16 02:00:05] Ejecutando hashcat para usuario secureuser
+[2024-12-16 02:00:06] Contraseña segura para usuario: secureuser
+[2024-12-16 02:00:06] Archivo temporal eliminado para usuario secureuser
+[2024-12-16 02:00:06] Resumen final - Total usuarios: 5, Débiles: 3
+[2024-12-16 02:00:06] Verificación completada exitosamente
+
+[2024-12-17 02:00:01] Iniciando ejecución del script verificarpasswd.sh
+[2024-12-17 02:00:01] Archivo de entrada especificado: passwd.txt
+[2024-12-17 02:00:01] Verificando existencia del archivo de entrada
+[2024-12-17 02:00:01] Archivo 'passwd.txt' encontrado y accesible
+[2024-12-17 02:00:01] Verificando dependencias del sistema
+[2024-12-17 02:00:01] Hashcat encontrado en /usr/bin/hashcat
+[2024-12-17 02:00:01] Iniciando verificación de contraseñas débiles
+[2024-12-17 02:00:01] Procesando usuario: admin
+[2024-12-17 02:00:02] Ejecutando hashcat para usuario admin
+[2024-12-17 02:00:02] CONTRASEÑA DÉBIL DETECTADA para usuario: admin
+[2024-12-17 02:00:02] Archivo temporal eliminado para usuario admin
+[2024-12-17 02:00:02] Procesando usuario: usuario1
+[2024-12-17 02:00:02] Ejecutando hashcat para usuario usuario1
+[2024-12-17 02:00:03] CONTRASEÑA DÉBIL DETECTADA para usuario: usuario1
+[2024-12-17 02:00:03] Archivo temporal eliminado para usuario usuario1
+[2024-12-17 02:00:03] Procesando usuario: usuario2
+[2024-12-17 02:00:03] Ejecutando hashcat para usuario usuario2
+[2024-12-17 02:00:04] CONTRASEÑA DÉBIL DETECTADA para usuario: usuario2
+[2024-12-17 02:00:04] Archivo temporal eliminado para usuario usuario2
+[2024-12-17 02:00:04] Procesando usuario: testuser
+[2024-12-17 02:00:04] Ejecutando hashcat para usuario testuser
+[2024-12-17 02:00:05] Contraseña segura para usuario: testuser
+[2024-12-17 02:00:05] Archivo temporal eliminado para usuario testuser
+[2024-12-17 02:00:05] Procesando usuario: secureuser
+[2024-12-17 02:00:05] Ejecutando hashcat para usuario secureuser
+[2024-12-17 02:00:06] Contraseña segura para usuario: secureuser
+[2024-12-17 02:00:06] Archivo temporal eliminado para usuario secureuser
+[2024-12-17 02:00:06] Resumen final - Total usuarios: 5, Débiles: 3
+[2024-12-17 02:00:06] Verificación completada exitosamente 

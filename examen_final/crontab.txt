@@ -1,0 +1,52 @@
+# =============================================================================
+# CONFIGURACIÓN DE CRONTAB
+# Examen Final - Automatización y Monitoreo en Linux con Bash
+# =============================================================================
+#
+# Descripción: Este archivo contiene la configuración de cron para ejecutar
+#              automáticamente el script verificarpasswd.sh diariamente a las 2:00 AM
+#
+# Formato: minuto hora día mes día_semana comando
+#          0     2    *   *   *         /ruta/completa/script parametro >> log 2>&1
+#
+# Autor: Estudiante
+# Fecha: $(date +%Y-%m-%d)
+# =============================================================================
+
+# Ejecutar verificarpasswd.sh diariamente a las 2:00 AM
+# El script verificará contraseñas débiles en passwd.txt y registrará resultados
+# en verificarpasswd.log con redirección de salida estándar y errores
+0 2 * * * /home/usuario/examen_final/verificarpasswd.sh /home/usuario/examen_final/passwd.txt >> /home/usuario/examen_final/verificarpasswd.log 2>&1
+
+# =============================================================================
+# INSTRUCCIONES DE INSTALACIÓN
+# =============================================================================
+#
+# Para instalar esta configuración de cron:
+#
+# 1. Editar el archivo crontab del usuario:
+#    crontab -e
+#
+# 2. Agregar la línea de cron (ajustar rutas según su sistema):
+#    0 2 * * * /home/usuario/examen_final/verificarpasswd.sh /home/usuario/examen_final/passwd.txt >> /home/usuario/examen_final/verificarpasswd.log 2>&1
+#
+# 3. Guardar y salir del editor
+#
+# 4. Verificar que la tarea se instaló correctamente:
+#    crontab -l
+#
+# 5. Verificar el estado del servicio cron:
+#    sudo systemctl status cron
+#
+# =============================================================================
+# EXPLICACIÓN DE LA CONFIGURACIÓN
+# =============================================================================
+#
+# 0 2 * * * = Ejecutar a las 2:00 AM todos los días
+# /home/usuario/examen_final/verificarpasswd.sh = Ruta completa al script
+# /home/usuario/examen_final/passwd.txt = Archivo de contraseñas a verificar
+# >> = Redirección de salida estándar (append)
+# /home/usuario/examen_final/verificarpasswd.log = Archivo de log
+# 2>&1 = Redirección de errores estándar a la misma salida
+#
+# ============================================================================= 
