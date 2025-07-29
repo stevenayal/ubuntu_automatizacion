@@ -70,7 +70,15 @@ verificar_recurso() {
     local umbral="$3"
     local unidad="$4"
     
-    if [ "$valor_actual" -gt "$umbral" ]; then
+    # Convertir valor_actual a entero para CPU
+    local valor_actual_int
+    if [ "$recurso" = "CPU" ]; then
+        valor_actual_int=$(printf "%.0f" "$valor_actual")
+    else
+        valor_actual_int="$valor_actual"
+    fi
+    
+    if [ "$valor_actual_int" -gt "$umbral" ]; then
         local mensaje="ALERTA: Uso de $recurso al ${valor_actual}${unidad} (umbral: ${umbral}${unidad}) - Usuario: $USUARIO"
         show_message "$RED" "⚠ $mensaje"
         log_message "$mensaje"
